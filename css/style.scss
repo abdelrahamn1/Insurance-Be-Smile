@@ -1,0 +1,135 @@
+@import "./breakpoints", "./colors", "../fonts/stylesheet.css", "./navbar",
+  "./Header", "./aboutUs", "./our_services", "./NewRequest", "./footer",
+  "./contactUs";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: $text_color;
+  font-family: Aileron;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $bg_color !important;
+  position: relative;
+}
+$primary: red;
+$danger: blue;
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger,
+);
+button {
+  border: none;
+  outline: none;
+}
+.text_green {
+  color: #80cbc4;
+}
+.loader {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999999;
+}
+.our_partner_img {
+  img {
+    width: 8vw;
+  }
+}
+.w-md-75 {
+  @include media(">=tablet") {
+    width: 75% !important;
+  }
+}
+.dotts {
+  position: relative;
+
+  width: 100vw;
+  left: 0px;
+  z-index: -1;
+  $colors: red, orange, yellow, green, blue, purple;
+  // $colors: $green_100, $green_200, green_300, $green_400, $green_500, $green_600,
+  //   $green_700;
+  .dot {
+    margin: 10rem;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    position: absolute;
+    z-index: -1;
+    background-color: $green_100;
+  }
+  @keyframes drop-waterfall-img {
+    0% {
+      transform: translate(0px, 0px) rotate(0deg) scale(1);
+    }
+    20% {
+      transform: translate(73px, -1px) rotate(36deg) scale(0.9);
+    }
+    40% {
+      transform: translate(141px, 72px) rotate(72deg) scale(1);
+    }
+    60% {
+      transform: translate(83px, 122px) rotate(108deg) scale(1.2);
+    }
+    80% {
+      transform: translate(-40px, 72px) rotate(144deg) scale(1.1);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg) scale(1);
+    }
+  }
+  @for $i from 1 through 15 {
+    .dot:nth-child(#{$i}) {
+      right: random(15) + vw;
+      top: 10 + random(600) + vh;
+      opacity: random(100) + 1%;
+      // background: random(length($colors));
+      animation: "drop-waterfall-img" linear forwards infinite;
+      animation-duration: (random(20) + 5) + s;
+    }
+  }
+  @for $l from 16 through 30 {
+    .dot:nth-child(#{$l}) {
+      left: -30 + random(20) + vw;
+      top: random(600) + 50vh;
+      opacity: random(100) + 1%;
+      animation: "drop-waterfall-img" linear forwards infinite;
+      animation-duration: (random(20) + 5) + s;
+    }
+  }
+}
+
+.rtl {
+  .Header_img {
+    right: auto;
+    left: 0px;
+  }
+  .aboutUs_Swiper {
+    right: -10vw;
+    left: initial;
+  }
+  .dotts {
+    @for $l from 16 through 30 {
+      .dot:nth-child(#{$l}) {
+        left: auto;
+        right: -30 + random(20) + vw;
+      }
+    }
+    @for $i from 1 through 15 {
+      .dot:nth-child(#{$i}) {
+        right: auto;
+        left: random(15) + vw;
+      }
+    }
+  }
+}
