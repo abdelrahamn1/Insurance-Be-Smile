@@ -26,4 +26,4 @@ The project utilizes SCSS for improved CSS management, including variables, mixi
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/abdelrahamn1/Watches-E-commerce.git
+   https://github.com/abdelrahamn1/Insurance-Be-Smile.git
