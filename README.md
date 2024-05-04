@@ -1,8 +1,16 @@
+[![HTML Version](https://img.shields.io/badge/HTML-5-red.svg)](https://www.w3.org/TR/html52/)
+[![Sass: yes](https://img.shields.io/badge/Sass-yes-blueviolet.svg)](https://sass-lang.com/)
+[![JavaScript Version](https://img.shields.io/badge/JavaScript-ES6-yellow.svg)](https://www.ecma-international.org/ecma-262/6.0/)
+[![Code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 # Insurance-Be-Smile
 
 ## Overview
 
 This project is an web application focused on selling Insurance  . It's built using HTML, SCSS (Sass), JavaScript, Jquery and any other relevant technologies used. The platform allows users to browse a collection of Insurance Systems.
+
+#### 🌟live Demo :  https://be-smile-web.netlify.app/
+
 
 ## Features
 
